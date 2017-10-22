@@ -6,8 +6,8 @@ const io = require('socket.io')(server);
 
 const messages = [{
   id: 1,
-  text: 'hola soy un mensage',
-  author: 'Daniele'
+  text: 'Welcome!!!!  ',
+  author: 'Admin'
 }
 
 ];
@@ -33,6 +33,6 @@ io.on('connection',(socket)=>{
 
 });
 
-server.listen(port, () => {
+server.listen(process.env.PORT || port, () => {
   console.log(`el servitor esta corriendo en htttp://localhost:${port}`);
 });
