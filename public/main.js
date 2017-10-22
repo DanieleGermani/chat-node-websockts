@@ -7,9 +7,14 @@ socket.on('messages', (data)=> {
 
 function render(data){
   let html = data.map((elem, index)=>{
-    return (` <div>
-                <strong>${elem.author}</strong>:
+    return (` <div class="panel-body chat-box-main">
+                <div class="chat-box-left">
+                <strong>${elem.author}</strong>
+                </div>
+                <div class="chat-box-name-left">
                 <em>${elem.text}</em>
+                </div>
+                  <hr class="hr-clas" />
                 </div>`);
   }).join(' ');
 
@@ -17,6 +22,7 @@ function render(data){
 
 
 document.getElementById('mensages').innerHTML = html;
+document.getElementById("text").value = "";
 }
 
 function addMessage(event){
