@@ -33,5 +33,5 @@ io.on('connection',(socket)=>{
 });
 
 server.listen(process.env.PORT || 8080, () => {
-  console.log(`el servitor esta corriendo en htttp://localhost:${port}`);
+  console.log(`el servitor esta corriendo en htttp://localhost:8080`);
 });
