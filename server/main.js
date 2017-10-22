@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const port = 8080;
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
@@ -33,6 +32,6 @@ io.on('connection',(socket)=>{
 
 });
 
-server.listen(process.env.PORT || port, () => {
+server.listen(process.env.PORT || 8080, () => {
   console.log(`el servitor esta corriendo en htttp://localhost:${port}`);
 });
