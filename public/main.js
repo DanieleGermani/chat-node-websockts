@@ -1,4 +1,4 @@
-const socket = io.connect('http://localhost:8080', {'forceNew': true});
+var socket = io.connect();
 
 socket.on('messages', (data)=> {
   console.log(data);
